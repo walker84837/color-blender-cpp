@@ -6,18 +6,20 @@ A simple color blending utility in C++ that blends two hexadecimal colors with a
 
 To use the color blender, follow the steps below:
 
-1. Clone the repository or download the source code files.
+1. Clone the repository:
+  ```git clone https://github.com/walker84837/color-blender-cpp.git```.
 
 2. Ensure you have a C++ compiler installed on your system.
 
 3. Open a terminal or command prompt and navigate to the project directory.
 
 4. Compile the code using the following command:
-  `g++ main.cpp header.hpp -o color-blender`: this will generate an executable file named `color-blender` in the current directory.
+  ```make```
+  To remove the executable file, do:
+  ```make clean```
 
 5. Run the executable with the desired arguments. There are two ways to provide the input:
-
-   `./color-blender <first-color> <second-color> <midpoints> <write-to-file>`
+   ```./color-blender <first-color> <second-color> <midpoints> <write-to-file>```
 
    Replace `<first-color>` with the first hexadecimal color, `<second-color>` with the second hexadecimal color, `<midpoints>` with the number of midpoints (an integer), and `<write-to-file>` with either "yes" or "no" to indicate whether to write the blended colors to a file.
 
@@ -29,7 +31,7 @@ Contributions to the color-blender-cpp project are always welcome. If you would 
 
 1. Fork the repository on GitHub.
 
-2. Create a new branch from the `main` branch for your changes.
+2. Create a new branch for your changes.
 
 3. Make your modifications, add new features, or fix bugs.
 

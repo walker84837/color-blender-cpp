@@ -10,7 +10,7 @@ Features:
 
 - Providing no arguments now throws an error, making the user give values in the command line.
 - Added Doxygen documentation
-- Added `.vscode` and `color-blender` to the `.gitignore`
+- Added `.vscode/` and `color-blender` to the `.gitignore`
 
 Fixes:
 
