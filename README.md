@@ -17,13 +17,9 @@ To use the color blender, follow the steps below:
 
 5. Run the executable with the desired arguments. There are two ways to provide the input:
 
-   - **Interactive Mode**: If no command-line arguments are provided, the program will prompt you to enter the first color, second color, number of midpoints, and whether to write the blended colors to a file.
+   `./color-blender <first-color> <second-color> <midpoints> <write-to-file>`
 
-   - **Command-Line Mode**: If you prefer to provide the input through command-line arguments, use the following format:
-
-     `./color-blender <first-color> <second-color> <midpoints> <write-to-file>`
-
-     Replace `<first-color>` with the first hexadecimal color, `<second-color>` with the second hexadecimal color, `<midpoints>` with the number of midpoints (an integer), and `<write-to-file>` with either "yes" or "no" to indicate whether to write the blended colors to a file.
+   Replace `<first-color>` with the first hexadecimal color, `<second-color>` with the second hexadecimal color, `<midpoints>` with the number of midpoints (an integer), and `<write-to-file>` with either "yes" or "no" to indicate whether to write the blended colors to a file.
 
 6. The program will blend the colors and display the result. If you chose to write the blended colors to a file, it will be saved in a file named `output.txt` in the current directory.
 
@@ -47,4 +43,4 @@ Thank you for your contributions!
 
 ## License
 
-This project is released under the Unlicense. You can find more details in the [LICENSE](LICENSE) file.
+This project is released under the GNU GPLv3. You can find more details in the [LICENSE](LICENSE) file.
