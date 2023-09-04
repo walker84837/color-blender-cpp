@@ -1,5 +1,5 @@
 CXX = g++
-CXXFLAGS = -O3 -std=c++17
+CXXFLAGS = -O3 -std=c++17 -Wall -pedantic
 
 SRCS = main.cpp header.hpp
 TARGET = color-blender
