@@ -2,6 +2,12 @@
 
 A simple color blending utility in C++ that blends two hexadecimal colors with a user-defined number of midpoints. The blended colors can be optionally written to a file.
 
+## Table of Contents
+
+1. [Usage](#usage)
+2. [Contributing](#contributing)
+3. [License](#license)
+
 ## Usage
 
 To use the color blender, follow the steps below:
@@ -33,16 +39,15 @@ Contributions to the color-blender-cpp project are always welcome. If you would 
 
 2. Create a new branch for your changes.
 
-3. Make your modifications, add new features, or fix bugs.
+3. Make your modifications, add new features, or fix bugs. (Ensure your code is well-tested and documented).
 
-4. Ensure your code is well-tested and documented.
+4. Commit your changes and push them to your forked repository.
 
-5. Commit your changes and push them to your forked repository.
-
-6. Submit a pull request to the `main` branch of the original repository, describing your changes and their benefits.
+5. Submit a pull request to forked repository, describing your changes.
 
 Thank you for your contributions!
 
 ## License
 
-This project is released under the GNU GPLv3. You can find more details in the [LICENSE](LICENSE) file.
+This project is released under the GNU GPLv3. You can find more details in the [LICENSE](LICENSE.md) file.
+
