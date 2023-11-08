@@ -11,12 +11,10 @@
 #include <string>
 #include <algorithm>
 #include <fstream>
+#include <string_view>
 
-#include "header.hpp"
-#include "wrappers.hpp"
-
-using std::vector;
 using std::string;
+using std::vector;
 using std::strcmp;
 
 #endif  // COMMON_HPP

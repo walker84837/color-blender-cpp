@@ -7,6 +7,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## \[Unreleased\]
 
+## \[0.1.1\] - 2023-11-08
+
+### Added
+
+  - None.
+
+### Fixed
+
+  - None.
+
+### Changed
+
+  - Optimized the `streq` function. 
+
+### Removed
+
+  - None.
+
 ## \[0.1.0\] - 2023-11-01
 
 ### Added
@@ -14,6 +32,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
   - Added the folders: `docs/`, `include/` and `src/`.
 
 ### Fixed
+
+  - None.
+
+### Changed
+
+  - None.
+
+### Removed
 
   - None.
 
