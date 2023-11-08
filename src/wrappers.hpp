@@ -5,16 +5,8 @@ using std::strcmp;
 
 namespace wrappers
 {
-	bool streq(char* s1, char* s2) {
-		int val = strcmp(s1, s2);
-		switch(val) {
-			case 0:
-				return true;
-				break;
-			default:
-				return false;
-				break;
-		}
+	bool streq(std::string_view s1, std::string_view s2) {
+		return s1.size() == s2.size() && !memcmp(s1.data(), s2.data(), s1.size());
 	}
 }
 
@@ -22,9 +14,10 @@ namespace utilities
 {
 	string toLowercase(const std::string &input) {
 		string lowercaseString = input;
-		std::transform(lowercaseString.begin(), lowercaseString.end(), lowercaseString.begin(), [](unsigned char c) {
-				return std::tolower(c);
-			});
+		std::transform(lowercaseString.begin(), lowercaseString.end(),
+				lowercaseString.begin(), [](unsigned char c) {
+					return std::tolower(c);
+		});
 		return lowercaseString;
 	}
 }

@@ -1,6 +1,6 @@
 # Compiler and flags
 CXX = g++
-CXXFLAGS = -std=c++11 -Ofast -Wall -Wextra -pedantic
+CXXFLAGS = -std=gnu++17 -Ofast -march=x86-64 -mtune=native -Wall -Wextra -pedantic
 
 # Directories
 SRC_DIR = src

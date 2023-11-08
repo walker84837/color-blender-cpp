@@ -1,8 +1,5 @@
 #include "common.hpp"
 
-using std::string;
-using std::vector;
-
 class ColorBlender {
 	  public:
 	/**
@@ -52,8 +49,6 @@ class ColorBlender {
 			blendedColors.push_back(colorToHex(color));
 		}
 
-		// I won't use quicksort as std::sort always gives the same performance,
-		// even with larger numbers.
 		std::sort(blendedColors.begin(), blendedColors.end());
 
 		return blendedColors;
@@ -77,7 +72,8 @@ class ColorBlender {
 
 	static std::string colorToHex(const Color &color) {
 		std::stringstream ss;
-		ss << "#" << std::hex << std::uppercase << std::setw(2) << std::setfill('0') << color.red << std::setw(2) << color.green << std::setw(2) << color.blue;
+		ss << "#" << std::hex << std::uppercase << std::setw(2) << std::setfill('0')
+			<< color.red << std::setw(2) << color.green << std::setw(2) << color.blue;
 		return ss.str();
 	}
 };
