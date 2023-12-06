@@ -2,6 +2,9 @@
 #include "header.hpp"
 #include "wrappers.hpp"
 
+using std::cout;
+using std::endl;
+
 using namespace utilities;
 using namespace wrappers;
 
@@ -21,7 +24,7 @@ int main(int argc, char **argv)
 	string start_color;
 	string end_color;
 	color_blender blender;
-	string version = "0.1.2"
+	string version = "0.1.2";
 
 	if (argc < 2 || argc < 3 || streq(std::string_view(argv[1]), "--help")) {
 		print_help(argv, "0.1.2"); // TODO: find better way to print help

@@ -72,7 +72,7 @@ class color_blender {
 
 	static string color_to_hex(const color &color) {
 		std::stringstream ss;
-		ss << "#" << std::hex << std::lowercase << std::setw(2) << std::setfill('0')
+		ss << "#" << std::hex << std::setw(2) << std::setfill('0')
 			<< color.red << std::setw(2) << color.green << std::setw(2) << color.blue;
 		return ss.str();
 	}
