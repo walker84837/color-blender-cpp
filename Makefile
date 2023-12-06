@@ -7,17 +7,12 @@ SRC_DIR = src
 INCLUDE_DIR = include
 BUILD_DIR = build
 BIN_DIR = bin
+BIN_FILE = color-blender-cpp
 
-# Source files
 SRCS = $(wildcard $(SRC_DIR)/*.cpp)
-
-# Object files
 OBJS = $(patsubst $(SRC_DIR)/%.cpp,$(BUILD_DIR)/%.o,$(SRCS))
+EXECUTABLE = $(BIN_DIR)/$(BIN_FILE)
 
-# Executable name
-EXECUTABLE = $(BIN_DIR)/color-blender-cpp.app
-
-# Targets
 all: $(EXECUTABLE)
 
 $(EXECUTABLE): $(OBJS)
@@ -29,7 +24,6 @@ $(BUILD_DIR)/%.o: $(SRC_DIR)/%.cpp
 	$(CXX) $(CXXFLAGS) -I$(INCLUDE_DIR) -c -o $@ $<
 
 clean:
-	rm -rf $(BUILD_DIR) $(BIN_DIR)
+	rm -rf $(BUILD_DIR) $(BIN_DIR) $(BIN_FILE)
 
 .PHONY: all clean
-

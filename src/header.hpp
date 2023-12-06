@@ -1,39 +1,39 @@
 #include "common.hpp"
 
-class ColorBlender {
+class color_blender {
 	  public:
 	/**
 	 * @brief Struct for the RGB colors.
 	 *
 	 */
-	struct Color {
+	struct color {
 		int red;
 		int green;
 		int blue;
 
-		Color() : red(0), green(0), blue(0) {}
+		color() : red(0), green(0), blue(0) {}
 
-		Color(int r, int g, int b) : red(r), green(g), blue(b) {}
+		color(int r, int g, int b) : red(r), green(g), blue(b) {}
 	};
 
 	/**
 	 * @brief Blends 2 hex colors, given starting, ending color and
 	 * midpoints.
 	 *
-	 * @param startColor First hex color. (e.g. #000000)
-	 * @param endColor Ending hex color. (e.g. #ffffff)
+	 * @param start_color First hex color. (e.g. #000000)
+	 * @param end_color Ending hex color. (e.g. #ffffff)
 	 * @param precision Number of blended colors to be output
 	 * @return std::vector<std::string>
 	 */
-	static vector<string> blendColors(const string &startColor, const string &endColor, int precision)
+	static vector<string> blend_colors(const string &start_color, const string &end_color, int precision)
 	{
-		Color start = parseHexColor(startColor);
-		Color end = parseHexColor(endColor);
+		color start = parse_hex_color(start_color);
+		color end = parse_hex_color(end_color);
 	
 		// Number of colors including start and end.
 		int count = precision + 2;
 
-		vector<Color> palette(count);
+		vector<color> palette(count);
 		palette[0] = start;
 		palette[count - 1] = end;
 
@@ -41,40 +41,39 @@ class ColorBlender {
 			int r = start.red + ((end.red - start.red) * i) / (count - 1);
 			int g = start.green + ((end.green - start.green) * i) / (count - 1);
 			int b = start.blue + ((end.blue - start.blue) * i) / (count - 1);
-			palette[i] = Color(r, g, b);
+			palette[i] = color(r, g, b);
 		}
 
-		vector<string> blendedColors;
+		vector<string> blended_colors;
 		for (const auto &color : palette) {
-			blendedColors.push_back(colorToHex(color));
+			blended_colors.push_back(color_to_hex(color));
 		}
 
-		std::sort(blendedColors.begin(), blendedColors.end());
+		std::sort(blended_colors.begin(), blended_colors.end());
 
-		return blendedColors;
+		return blended_colors;
 	}
 
 	  private:
 	/**
 	 * @brief Parses a given hex color and converts it to RGB
 	 *
-	 * @param hexColor Given hex color.
-	 * @return Color
+	 * @param hex_color Given hex color.
+	 * @return color
 	 */
-	static Color parseHexColor(const std::string &hexColor) {
+	static color parse_hex_color(const string &hex_color) {
 		int r, g, b;
-		std::istringstream(hexColor.substr(1, 2)) >> std::hex >> r;
-		std::istringstream(hexColor.substr(3, 2)) >> std::hex >> g;
-		std::istringstream(hexColor.substr(5, 2)) >> std::hex >> b;
+		std::istringstream(hex_color.substr(1, 2)) >> std::hex >> r;
+		std::istringstream(hex_color.substr(3, 2)) >> std::hex >> g;
+		std::istringstream(hex_color.substr(5, 2)) >> std::hex >> b;
 
-		return Color(r, g, b);
+		return color(r, g, b);
 	}
 
-	static std::string colorToHex(const Color &color) {
+	static string color_to_hex(const color &color) {
 		std::stringstream ss;
-		ss << "#" << std::hex << std::uppercase << std::setw(2) << std::setfill('0')
+		ss << "#" << std::hex << std::lowercase << std::setw(2) << std::setfill('0')
 			<< color.red << std::setw(2) << color.green << std::setw(2) << color.blue;
 		return ss.str();
 	}
 };
-

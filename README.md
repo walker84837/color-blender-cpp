@@ -1,53 +1,42 @@
 # color-blender-cpp
 
-A simple color blending utility in C++ that blends two hexadecimal colors with a user-defined number of midpoints. The blended colors can be optionally written to a file.
+A color blending utility in C++ that blends two hexadecimal colors with a user-defined number of midpoints.
 
 ## Table of Contents
 
-1. [Usage](#usage)
-2. [Contributing](#contributing)
-3. [License](#license)
+1.  [Usage](#usage)
+2.  [Contributing](#contributing)
+3.  [License](#license)
 
 ## Usage
 
 To use the color blender, follow the steps below:
 
-1. Clone the repository:
-  ```git clone https://github.com/walker84837/color-blender-cpp.git```.
+1.  Clone the repository: `git clone https://github.com/walker84837/color-blender-cpp.git`.
+2.  Open a terminal or command prompt and navigate to the project directory.
+3.  Compile the code by using `make`. To clean build artifacts, do `make clean`.
 
-2. Ensure you have a C++ compiler installed on your system.
+<!-- end list -->
 
-3. Open a terminal or command prompt and navigate to the project directory.
-
-4. Compile the code using the following command:
-  ```make```
-  To remove the executable file, do:
-  ```make clean```
-
-5. Run the executable with the desired arguments. There are two ways to provide the input:
-   ```./color-blender <first-color> <second-color> <midpoints> <write-to-file>```
-
-   Replace `<first-color>` with the first hexadecimal color, `<second-color>` with the second hexadecimal color, `<midpoints>` with the number of midpoints (an integer), and `<write-to-file>` with either "yes" or "no" to indicate whether to write the blended colors to a file.
-
-6. The program will blend the colors and display the result. If you chose to write the blended colors to a file, it will be saved in a file named `output.txt` in the current directory.
+  - `./color-blender <first-color> <second-color> <midpoints> <write-to-file>`
+      - `<first-color>`: the first hexadecimal color
+      - `<second-color>`: the second hexadecimal color
+      - `<midpoints>`: the number of midpoints
+      - `<write-to-file>`: the possible values are "yes" or "no". They indicate whether to write the blended colors to "output.txt".
 
 ## Contributing
 
-Contributions to the color-blender-cpp project are always welcome. If you would like to contribute, please follow these steps:
+Contributions to the `color-blender-cpp` project are always welcome. If you would like to contribute, please follow the following guidelines:
 
-1. Fork the repository on GitHub.
-
-2. Create a new branch for your changes.
-
-3. Make your modifications, add new features, or fix bugs. (Ensure your code is well-tested and documented).
-
-4. Commit your changes and push them to your forked repository.
-
-5. Submit a pull request to forked repository, describing your changes.
+  - Follow the [Linux kernel coding style](https://docs.kernel.org/process/coding-style.html#codingstyle). Don't keep the lines exactly 80 characters long (eg. don't break string literals in different parts).
+  - Keep your changes C++17. Prefer standard functions over reinventing the wheel. Feel free to replace functions with ones which use standard functions. Make sure to keep the same parameters.
+  - Open an issue if you are proposing bigger changes (eg. using a new library for X feature, changing styles, removing `using` statements). In your issue please describe the following:
+      - give more information about your proposed changes,
+      - the reasoning behind them,
+      - what's the difference between not applying them and applying them.
 
 Thank you for your contributions!
 
 ## License
 
-This project is released under the GNU GPLv3. You can find more details in the [LICENSE](LICENSE.md) file.
-
+This project is released under the [GNU General Public License, version 3](LICENSE.md).
