@@ -24,6 +24,7 @@ int main(int argc, char **argv)
 	string version = "0.1.2"
 
 	if (argc < 2 || argc < 3 || streq(std::string_view(argv[1]), "--help")) {
+		print_help(argv, "0.1.2"); // TODO: find better way to print help
 		return 0;
 	}
 
