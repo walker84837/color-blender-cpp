@@ -7,23 +7,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## \[Unreleased\]
 
-## \[0.1.1\] - 2023-11-08
+## \[0.1.2\] - 2023-12-06
 
 ### Added
 
-  - None.
+  - User input is sanitized by stripping every non-hex character and padding it with zeroes if the resulting string isn't 6 characters long.
 
-### Fixed
+### Changed
 
-  - None.
+  - Changed naming style to snake_case for better readability.
+
+## \[0.1.1\] - 2023-11-08
 
 ### Changed
 
   - Optimized the `streq` function. 
-
-### Removed
-
-  - None.
 
 ## \[0.1.0\] - 2023-11-01
 
